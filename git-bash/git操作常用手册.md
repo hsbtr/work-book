@@ -328,6 +328,13 @@ git branch -d temp
 git pull origin
 ```
 
+#### 问题记录  
+远程库新建后有md文档，本地提交时会提示远程库与本地库有不同，不予提交，
+解决方案  带上参数 --allow-unrelated-histories   含义 说明为什么要合并 
+git pull origin master --allow-unrelated-histories
+
+
+
 ### 文件和目录操作命令
 
 #### 创建文件夹  
@@ -503,9 +510,8 @@ set number
 touch .gitignore
 ```
 
-
-
-4.用vim进入忽略文件，i键进入插入模式，写入忽略文件规则，完成后esc键退出插入模式，英文输入:wq回车
+#### 编辑文件
+用vim进入忽略文件，i键进入插入模式，写入忽略文件规则，完成后esc键退出插入模式，英文输入:wq回车
 
 ```bash
 vim .gitignore
@@ -534,3 +540,18 @@ git commit -m 'update .gitignore'
 `**`   匹配多级目录，可在开始，中间，结束  
 `?`    通用匹配单个字符  
 `[]`   通用匹配单个字符列表  
+
+
+### git bash 中文乱码问题
+windows系统git 中文编码是gdk  
+解决方案 依次执行以下命令  
+
+```bash
+git config --global gui.encoding utf-8
+git config --global i18n.commitencoding utf-8
+git config --global i18n.logoutputencoding utf-8
+export LESSCHARSET=utf-8
+
+
+```
+
