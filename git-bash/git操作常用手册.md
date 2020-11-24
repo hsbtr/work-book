@@ -104,7 +104,7 @@ git remote show origin
 
 
 
-### 本地分支与远程分支
+### 分支管理
 #### 查询本地分支
 
 ```bash
@@ -197,7 +197,27 @@ git checkout -b a
 git push origin --all
 ```
 
+#### 分支重命名
+
+`oldname` 旧分支名 
+
+`newname` 新的分支名
+
+```bash
+git branch -m oldname newname
+```
+
+注： 修改分支名后，需要将此分支推动到远程源上并且删除远程源的旧分支
+
+```bash
+git push origin newname
+git push origin -d oldname
+```
+
+
+
 #### 强行推送  
+
 注：即使本地与远程仓库分支有冲突，也会忽略强行提交，容易造成代码丢失，谨慎使用  
 ```bash
 git push origin --force
