@@ -223,7 +223,26 @@ git push origin -d oldname
 git push origin --force
 ```
 
+#### 删除无用的远程分支跟踪  
+
+列出仍在远程跟踪但是远程已被删除的远程分支
+
+```bash
+git remote prune origin --dry-run
+```
+
+清除上面命令列出来分支的远程跟踪  
+
+```bash
+git remote  prune origin
+```
+
+
+
+
+
 ### 本地仓库管理  
+
 #### 查看状态  
 ```bash
 git status
