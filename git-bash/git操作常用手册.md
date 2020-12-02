@@ -280,7 +280,7 @@ git reset – hard HEAD^^
 git reset HEAD index.
 ```
 
-#### .查询某个文件的代码  
+#### 查询某个文件的代码  
 ```bash
 cat index.js 
 ```
@@ -311,7 +311,20 @@ git rm - - cached filename
 git reflog
 ```
 
+#### 修改commit注释信息  
+
+在为push的情况下修改commit注释信息
+
+```bash
+git commit --amend
+```
+
+进入vim界面，i 键进入编辑模式，输入完`esc`键退出输入`：wq`  
+
+
+
 ### 远程库更新本地库  
+
 #### 克隆远程库  
 ```bash
 git clone 远程库链接
