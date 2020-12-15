@@ -343,7 +343,7 @@ git fetch origin master
 git log -p master.. origin/master
 ```
 
-#### 合并  
+##### 合并  
 第三步，把远程下载下来的代码合并到本地仓库，远程的和本地的合并  
 ```bash
 git merge origin/master
