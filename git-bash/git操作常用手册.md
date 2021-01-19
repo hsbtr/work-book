@@ -271,7 +271,7 @@ git reset --hard HEAD^
 
 #### 回退到上两个版本  
 ```bash
-git reset – hard HEAD^^
+git reset –-hard HEAD^^
 ```
 
 #### 回退一个步骤  
