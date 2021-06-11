@@ -237,6 +237,12 @@ git remote prune origin --dry-run
 git remote  prune origin
 ```
 
+#### 推送本地新建的分支到远程 
+
+```bash
+git checkout -b dev-001
+git push --set-upstream origin dev-001
+```
 
 
 
